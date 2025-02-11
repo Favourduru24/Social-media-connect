@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+    @font-face{
+        font-family:robert-regular;
+        src: ur('/fonts/robert-circular.woff2') format('.woff2');
+    }
+    @font-face{
+        font-family: zentry-regular;
+        src: ur('/fonts/zentry-regular.woff2') format('.woff2');
+    }
+}
+
+    .scroll-hidden::-webkit-scrollbar{
+        display: none;
+    }
+    .scroll-hidden{
+        scrollbar-width: none;
+    }
+
+  /* @layer base  
+  @layer utilities
+  @layer components
+  */
