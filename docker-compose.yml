@@ -1,0 +1,18 @@
+services:
+  backend:
+    build: ./backend
+    container_name: back-container
+    restart: always
+    env_file:
+      - ./backend/.env
+    ports:
+      - "5000:5000"
+
+  frontend:
+    build: ./client/connect
+    container_name: front-container
+    restart: always
+    ports:
+      - "5173:5173"
+    depends_on:
+      - backend
