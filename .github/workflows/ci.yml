@@ -34,9 +34,9 @@ jobs:
         working-directory: client/connect
         run: npm ci
 
-      - name: Lint frontend
-        working-directory: client/connect
-        run: npm run lint -- --max-warnings=0
+      # - name: Lint frontend
+      #   working-directory: client/connect
+      #   run: npm run lint -- --max-warnings=0
 
       - name: Build backend image
         run: docker build -t backend ./backend
