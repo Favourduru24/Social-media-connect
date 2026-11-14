@@ -2,7 +2,6 @@
  import img1 from '/images/smiley.webp'
  import Form from '../../components/Form'
 import { useState, useEffect} from 'react'
-import { useRef } from 'react'
 import { FaEyeSlash } from "react-icons/fa6";
 import { FaEye } from "react-icons/fa6";
 import {useAddNewUserMutation} from './usersApiSlice'
@@ -19,7 +18,6 @@ import usePersist from '../../hooks/usePersist'
 
 const SignUp = () => {
 
-       const icons = IoMdNotificationsOutline    
       // SignUp Function && Authentication 
       const [signNewUser, {
         isLoading,
@@ -119,23 +117,13 @@ const SignUp = () => {
 
   // Interaction in the form State
    const [allow, setAllow] = useState(false)
-   const [lightMode, setLightMode] = useState(true)
-   const [open, setOpen] = useState(false)
    const [show, setShow] = useState('password')
    
     //Interaction in the form
     const handleAllowance = () => {
       setAllow((prev) => !prev)
     }
-    const handleOpen = () => {
-      setOpen((prev) => !prev)
-    }
-
-   const handlePassword = () => {
-      setShow((prev) => !prev)
-    }
-
-
+    
 
 
     const [theme, setTheme] = useState(localStorage.getItem("theme") ? localStorage.getItem("theme"): "system")
